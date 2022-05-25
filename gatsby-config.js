@@ -1,6 +1,4 @@
-require("dotenv").config({
-    path: `.env.${process.env.NODE_ENV}`,
-});
+require("dotenv").config()
 
 const contentfulConfig = {
     spaceId: process.env.CONTENTFUL_SPACE_ID,
@@ -63,8 +61,8 @@ module.exports = {
         {
             resolve: "gatsby-source-shopify",
             options: {
-                password: process.env.SHOPIFY_APP_PASSWORD,
-                storeUrl: process.env.GATSBY_MYSHOPIFY_URL,
+				password: process.env.SHOPIFY_SHOP_PASSWORD,
+				storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
                 shopifyConnections: ["collections"]
             }
         },
